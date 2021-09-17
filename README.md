@@ -1,2 +1,2 @@
 # proyecto-IV
-Mi proyecto de la asignatura IV
+Idea de proyecto: XD
