@@ -1,2 +1,2 @@
 # proyecto-IV
-Idea de proyecto: XD
+Idea de proyecto: xdd
