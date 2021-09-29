@@ -5,3 +5,5 @@ Siempre nos ha pasado de querer hacer una excursión a la montaña, o de querer 
 
 ## Descripción
 Aplicación que conecte a diferentes tipos de usuario para poder realizar actividades física fuera del alcance de caminar. El negocio estaría en saber de donde sale la gente y la actividades que sueles salir a realizar para fundar una institución de ese deporte que le pilla fuera de alcance
+
+## HU
