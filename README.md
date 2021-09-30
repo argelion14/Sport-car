@@ -15,3 +15,5 @@ La idea de este proyecto viene dada por mi experiecia cuando quise hacer escalad
 2. Usuario 2
 3. Usuario 3
 
+## Documentación adicional
+Documentación adicional [aquí](docs/objetivo1.md)
