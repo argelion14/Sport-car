@@ -1,3 +1,3 @@
 # Documentación adicional
 
-#Tipos de usuarios
+## Tipos de usuarios
