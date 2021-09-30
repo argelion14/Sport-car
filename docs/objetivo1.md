@@ -1,1 +1,3 @@
-#Documentación adicional
+# Documentación adicional
+
+#Tipos de usuarios
