@@ -10,6 +10,7 @@
 
 ## Historias de usuario
 
-- HU1: Como usuario que no dispongo de vehículo personal quiero poder viajar con otras personas que disponen de un medio de transporte en un determinado momento y poder suplir los gastos del transporte 
-- HU2: Como usuario regular quiero conocer u ofrecer actividades regularmente fijando un sitio de recogida en vehículo privado y una hora fija
-- HU3: Como usuario eventual que recure a la aplicación para poder interactuar con demás personas quiero poder conocer a los usuarios antes de realizar la actividad en cuestión 
+- HU1: Como usuario que no dispongo de vehículo personal quiero buscar viajar con otras personas que disponen de un medio de transporte en un determinado momento, por ello quiero poder registrar mis datos personales.
+- HU2: Como usuario que dispongo de vehículo personal quiero poder ofrecer mi vehículo a personas que realicen la misma actividad que yo, por ello quiero poder registrar tanto mis datos personales como mi disposición de vehículo.
+- HU3: Como usuario quiero poder ver en un mapa interactivo los diferentes vehículos privados que puedo tomar para ir a realizar actividades.
+- Como usuario quiero poder comunicarme con los usuarios para poder determinar y concretar mejor las planes.
