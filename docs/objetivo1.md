@@ -5,6 +5,8 @@
 - Usuario sin vehículo personal: Usuario que busca realizar cualquier nueva actividad física y no dispone de transporte
 - Usuario regular: Le interesa realizar una actividad regularmente en un lugar concreto (escalada en un rocódromo) (con disponibilidad de tranporte público o no)
 - Usuario sociable: Persona cuyo interés reside en conocer nuevas personas a traves del deporte (con disponibilidad de tranporte público o no)
+- Institución pública/privada: Intitución que consulta las estadísticas, para conocer cuales son las actividades que más solicitan los usuarios para con ello poder fundar un centro cerca de estos
+
 
 ## Historias de usuario
 
