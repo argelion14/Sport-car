@@ -7,6 +7,7 @@
 - Usuario sociable: Persona cuyo interés reside en conocer nuevas personas a traves del deporte (con disponibilidad de tranporte público o no)
 - Institución pública/privada: Intitución que consulta las estadísticas, para conocer cuales son las actividades que más solicitan los usuarios para con ello poder fundar un centro cerca de estos
 
+---
 
 ## Historias de usuario
 
