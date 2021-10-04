@@ -9,11 +9,5 @@ Aplicación que conecte a diferentes tipos de usuario para poder realizar activi
 ## Motivación
 La idea de este proyecto viene dada por mi experiecia cuando quise hacer escalada y no pude pues no disponia de vehiculo particular ni existia ningún medio de transporte público que me acercase minimamente al rocodromo.
 
-
-## Historias de usuario
-1. Usuario 1
-2. Usuario 2
-3. Usuario 3
-
 ## Documentación adicional
 Documentación adicional [aquí](docs/objetivo1.md)
