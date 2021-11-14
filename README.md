@@ -11,3 +11,6 @@ La idea de este proyecto viene dada por mi experiecia cuando quise hacer escalad
 
 ## Documentación adicional
 Documentación adicional [aquí](docs/objetivo1.md)
+
+## Gestores
+Documentación [aquí](https://github.com/argelion14/Sport-car/blob/Objetivo3/docs/gestores.md)
