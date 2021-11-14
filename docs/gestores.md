@@ -34,7 +34,7 @@ poetry run python your_script.py
 ~~~
 ### Nuevos test al directorio test y lanzarlos:
 ~~~
-poetry run /test/"nombre.py"
+poetry run /test/nombre.py
 ~~~
 
 
