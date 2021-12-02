@@ -1,4 +1,7 @@
 # Instalación
+He decidido usar poetry pues fue el primer gestor del que oí hablar, busqué información sobre este y vi lo sencillo que era sobre Invoke y la documentación que aportaba en su web me ayudo a entender el uso de los test y control de dependencias
+
+
 [Instalar poetry](https://python-poetry.org/docs/#installation)
 Comprobamos que se ha instalado ejecutando 
 ~~~
