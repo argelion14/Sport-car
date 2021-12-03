@@ -1,5 +1,5 @@
 # Instalación
-He decidido usar poetry pues fue el primer gestor del que oí hablar, busqué información sobre este y vi lo sencillo que era sobre Invoke y la documentación que aportaba en su web me ayudo a entender el uso de los test y control de dependencias
+He decidido usar poetry pues fue el primer gestor del que oí hablar, busqué información sobre este y vi lo sencillo que era sobre Invoke y la documentación que aportaba en su web me ayudo a entender el uso de los test y control de dependencias, además de su archivo clave pyproject.toml el cual contiene metadata del proyecto y de todas sus dependencias, esta cuenta con su propia CLI (Command line interface) el cual es una ventaja a largo plazo pues facilita entre muchas cosas acceso a diferentes configuraciones de manera rápida y sencilla.
 
 
 [Instalar poetry](https://python-poetry.org/docs/#installation)
