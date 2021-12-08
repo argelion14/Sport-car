@@ -7,7 +7,6 @@ Comprobamos que se ha instalado ejecutando
 ~~~
 poetry --version
 ~~~
-En Unix se encuentra en $HOME/.poetry/bin
 
 # Uso
 Inicialización de un proyecto preexistente para crear de forma interactiva un pyproject.toml
