@@ -1,7 +1,7 @@
 # Instalación
 He decidido usar poetry pues fue el primer gestor del que oí hablar, busqué información sobre este y vi lo sencillo que era sobre Invoke y la documentación que aportaba en su web me ayudo a entender el uso de los test y control de dependencias, además de su archivo clave pyproject.toml el cual contiene metadata del proyecto y de todas sus dependencias, esta cuenta con su propia CLI (Command line interface) el cual es una ventaja a largo plazo pues facilita entre muchas cosas acceso a diferentes configuraciones de manera rápida y sencilla.
 
-Se buscó también información sobre invoke como se mencionó, el cual hacia de gestor de tareas, y se podía usar de respaldo a Pip como gestor de dependencias, pero esto no se consideró pues la primera opción era más sencilla de realizar en un primer vistazo
+Se buscó también información sobre invoke como se mencionó, el cual hacia de gestor de tareas, y se podía usar de respaldo a Pip como gestor de dependencias, pero esto no se consideró pues la primera opción era más sencilla de realizar en un primer vistazo, otro criterio que se buscó fue el mantenimiento pero en el momento en que se visitó ambos gestores, estos estaban siendo mantenidos a diario.
 
 [Instalar poetry](https://python-poetry.org/docs/#installation)
 Comprobamos que se ha instalado ejecutando 
