@@ -1,4 +1,3 @@
-
 class Actividad:
 
     def __init__(self, nombre, fecha_inicio, fecha_final, tipo, ubicacion, ciudad):
