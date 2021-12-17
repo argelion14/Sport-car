@@ -15,7 +15,7 @@ Documentación adicional [aquí](docs/objetivo1.md)
 ## Gestores
 Documentación [aquí](https://github.com/argelion14/Sport-car/blob/Objetivo3/docs/gestores.md)
 
-## Comprobar la sintaxis
+## Comprobar que compila
 Con el siguiente comando comprobamos la compilación de los ficheros
 ~~~
 invoke check
