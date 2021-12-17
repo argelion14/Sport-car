@@ -16,7 +16,7 @@ Documentación adicional [aquí](docs/objetivo1.md)
 Documentación [aquí](https://github.com/argelion14/Sport-car/blob/Objetivo3/docs/gestores.md)
 
 ## Comprobar la sintaxis
-Con el siguiente comando comprobamos que la estructura del fichero pyproject.toml es correcta o devuelve un informe en caso de que haya algún error
+Con el siguiente comando comprobamos la compilación de los ficheros
 ~~~
-poetry check
+invoke check
 ~~~
