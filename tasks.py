@@ -1,8 +1,7 @@
 from invoke import task, run
 
 @task
-def check(c, docs=False):
-    #c.run("python setup.py build")
-    print("Comprobar sintasis/compilación")
-    run ("pylint sportcar")
+def check(c):
+    print("Comprobar la compilación")
+    run ("python3 -m compileall sportcar/*.py")
     print("Compilacion nice!")
