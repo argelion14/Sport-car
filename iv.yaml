@@ -1,6 +1,6 @@
 lenguaje: python
 entidad: sportcar/actividad.py
 automatizar:
-  fichero: pyproject.toml
-  orden: poetry
+  fichero: tasks.py
+  orden: invoke
           
