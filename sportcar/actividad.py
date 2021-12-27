@@ -1,7 +1,18 @@
+from sportcar.errores import NombreFormatError
+from enum import Enum
+
+class ActividadesDisponibles(Enum):
+    ESCALADA = "Escalada en rocodromo"
+    NATACION = "Natación en pabellón"
+    PADEL = "Padel en pista"
 
 class Actividad:
 
     def __init__(self, nombre, fecha_inicio, fecha_final, tipo, ubicacion, ciudad):
+        
+        if (nombre not in ActividadesDisponibles._member_names_):
+            raise NombreFormatError()
+
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio
         self._fecha_final = fecha_final
