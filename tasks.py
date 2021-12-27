@@ -8,6 +8,6 @@ def check(c):
 
 @task
 def test(c):
-    print("Lanzamos los test")
-    run("pytest test/")
+    print("Lanzamos los test de unittest")
+    run("python3 -m unittest -v test/test.py")
     print("Todo correcto")
