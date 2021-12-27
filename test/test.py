@@ -22,5 +22,12 @@ class Tests (unittest.TestCase):
         with self.assertRaises(sportcar.errores.TelefonoFormatError):
             usuario = sportcar.usuario.Usuario('Angel',True,695641699,'Granada')
 
+    def test_nombre(self):
+        """
+        Test para comprobar que se levanta la excepción cuando se da un nombre que no se encuentra entre las opciones disponibles
+        """
+        with self.assertRaises(sportcar.errores.NombreFormatError):
+            actividad = sportcar.actividad.Actividad('NATACiION','fecha_inicio', 'fecha_final', 'tipo', 'ubicacion', 'ciudad')
+
 if __name__ == '__main__':
     unittest.main()
