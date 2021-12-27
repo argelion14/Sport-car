@@ -7,4 +7,6 @@ Se seguirá la documentación oficial para instalar invoke por lo que se usará 
 
 [Instalar Invoke](https://www.pyinvoke.org/installing.html).
 
-Para comprobar la compilación del código simplemente correremos el comando python3 -m compileall sportcar/*.py dentro del fichero tasks.py en el apartado check
+Para comprobar la compilación del código simplemente correremos el comando python3 -m compileall sportcar/*.py dentro del fichero tasks.py en el apartado check.
+
+Para realizar los test con invoke, correremos el comando python3 -m unittest -v test/test.py dentro del fichero tasks.py en el apartado test.
