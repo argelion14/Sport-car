@@ -1,6 +1,15 @@
+from sportcar.errores import TelefonoFormatError, VehiculoFormatError
+
 class Usuario:
 
     def __init__(self, nombre, vehiculo, telefono, ciudad):
+        
+        if type(telefono)!=str:
+            raise TelefonoFormatError()
+
+        if type(vehiculo)!=bool:
+            raise VehiculoFormatError()
+
         self._nombre = nombre
         self._vehiculo = vehiculo
         self._telefono = telefono
