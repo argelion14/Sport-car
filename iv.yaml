@@ -3,4 +3,4 @@ entidad: sportcar/actividad.py
 automatizar:
   fichero: tasks.py
   orden: invoke
-test: tests/test.py
+test: test/test.py
