@@ -1,6 +1,15 @@
 from invoke import task, run
 
 @task
+def installdeps(c):
+    """
+    Instala todas las dependencias
+    """
+    print("Instalar las dependencias")
+    run ("pip3 install -r requirements.txt")
+    print("Se han instalado correctamente las dependencias")
+
+@task
 def check(c):
     print("Comprobar la compilación")
     run ("python3 -m compileall sportcar/*.py")
