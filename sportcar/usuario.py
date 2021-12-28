@@ -1,9 +1,15 @@
-from sportcar.errores import TelefonoFormatError, VehiculoFormatError
-
+from sportcar.errores import TelefonoFormatError, VehiculoFormatError, NombreUsuarioTooLongError, NombreUsuarioTooShortError
+from sportcar.constantes import Contantes
 class Usuario:
 
     def __init__(self, nombre, vehiculo, telefono, ciudad):
         
+        if (len(nombre) > Contantes.LONGITUD_NOMBRE_MAXIMO):
+            raise NombreUsuarioTooLongError()
+
+        if (len(nombre) < Contantes.LONGITUD_NOMBRE_MINIMO):
+            raise NombreUsuarioTooShortError()
+
         if type(telefono)!=str:
             raise TelefonoFormatError()
 
