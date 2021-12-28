@@ -1,4 +1,4 @@
-from sportcar.errores import NombreFormatError
+from sportcar.errores import NombreFormatError , TipoActividadFormatError
 from enum import Enum
 
 class ActividadesDisponibles(Enum):
@@ -6,12 +6,20 @@ class ActividadesDisponibles(Enum):
     NATACION = "Natación en pabellón"
     PADEL = "Padel en pista"
 
+class TipoActividad(Enum):
+    DEPORTIVA = "Actividad deportiva"
+    CULTURA = "Actividad cultural"
+    APRENDIZAJE = "Actividad en la que se prioriza el querer aprender"
+
 class Actividad:
 
     def __init__(self, nombre, fecha_inicio, fecha_final, tipo, ubicacion, ciudad):
         
         if (nombre not in ActividadesDisponibles._member_names_):
             raise NombreFormatError()
+
+        if (tipo not in TipoActividad._member_names_):
+            raise TipoActividadFormatError()
 
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio
