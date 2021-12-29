@@ -7,6 +7,8 @@ sys.path.append(".")
 import sportcar.actividad
 import sportcar.usuario
 import sportcar.errores
+import sportcar.grupo
+import sportcar.grupos
 from assertpy import assert_that
 
 class TestActividad (unittest.TestCase):
@@ -30,9 +32,7 @@ class TestActividad (unittest.TestCase):
         Test que comprueba que se da el AssertionError cuando la fecha introducida de inicio es posterios a la de final
         """
         with self.assertRaises(AssertionError):
-            fecha_inicio = datetime.datetime(2022,1,2,3,4,5,6)
-            fecha_final = datetime.datetime(2021,2,3,4,5,6,7)
-            actividad = sportcar.actividad.Actividad('NATACION',fecha_inicio, fecha_final, 'DEPORTIVA', 'ubicacion', 'ciudad')
+            actividad = sportcar.actividad.Actividad('NATACION',datetime.datetime(2022,1,2,3,4,5,6), datetime.datetime(2021,2,3,4,5,6,7), 'DEPORTIVA', 'ubicacion', 'ciudad')
         
 class TestUsuario (unittest.TestCase):
 
@@ -63,6 +63,20 @@ class TestUsuario (unittest.TestCase):
         """
         with self.assertRaises(sportcar.errores.TelefonoFormatError):
             usuario = sportcar.usuario.Usuario('Angel',True,695641699,'Granada')
+
+class TestGrupos (unittest.TestCase):
+
+    def test_grupoVacio(self):
+        """
+        Test para comprobar que se levanta la excepcion cuando se quiere realizar alguna estadistica y no existe ningun grupo
+        """
+        with self.assertRaises(sportcar.errores.GruposVacio):
+            usuario = sportcar.usuario.Usuario('Angel',True,'695641699','Granada')
+            actividad = sportcar.actividad.Actividad('NATACION',datetime.datetime(2022,1,2,3,4,5,6), datetime.datetime(2023,1,2,3,4,5,6), 'DEPORTIVA', 'ubicacion', 'ciudad')
+            grupo = sportcar.grupo.Grupo(usuario,actividad)
+            grupos = sportcar.grupos.Grupos()
+            #grupos.aniadir_grupo(grupo)
+            ciudadFav = grupos.ciudadPreferida()
 
 if __name__ == '__main__':
     unittest.main()
