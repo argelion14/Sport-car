@@ -21,3 +21,7 @@ class NombreUsuarioTooShortError (Exception):
 class TipoActividadFormatError (Exception):
     def __init__(self, message = "Debe ser un tipo admitido"):
         self.message = message
+
+class GruposVacio (Exception):
+    def __init__(self, message = "No existen grupos"):
+        self.message = message
