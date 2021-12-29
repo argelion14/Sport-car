@@ -1,5 +1,6 @@
 import unittest
 import sys
+import datetime
 sys.path.append(".")
 
 import sportcar.actividad
