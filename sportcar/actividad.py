@@ -23,7 +23,7 @@ class Actividad:
         if (tipo not in TipoActividad._member_names_):
             raise TipoActividadFormatError()
 
-        assert_that(fecha_inicio).is_after(fecha_final) #Nos da un assert en caso de que la fecha de inicio sea posterior a la de final
+        assert_that(fecha_inicio).is_before(fecha_final) #Nos da un AssertionError en caso de que la fecha de inicio sea posterior a la de final
 
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio

@@ -1,3 +1,4 @@
+from logging import error
 import unittest
 import sys
 import datetime
@@ -6,6 +7,7 @@ sys.path.append(".")
 import sportcar.actividad
 import sportcar.usuario
 import sportcar.errores
+from assertpy import assert_that
 
 class TestActividad (unittest.TestCase):
     
@@ -14,15 +16,24 @@ class TestActividad (unittest.TestCase):
         Test para comprobar que se levanta la excepción cuando se da un nombre que no se encuentra entre las opciones disponibles
         """
         with self.assertRaises(sportcar.errores.NombreFormatError):
-            actividad = sportcar.actividad.Actividad('NATACiION','fecha_inicio', 'fecha_final', 'DEPORTIVA', 'ubicacion', 'ciudad')
+            actividad = sportcar.actividad.Actividad('NATACiION',datetime.time(1,0,0), datetime.time(2,0,0), 'DEPORTIVA', 'ubicacion', 'ciudad')
 
     def test_tipoOpcion(self):
         """
         Test para comprobar que se levanta la excepción cuando se da un tipo que no se encuentra entre las opciones disponibles
         """
         with self.assertRaises(sportcar.errores.TipoActividadFormatError):
-            actividad = sportcar.actividad.Actividad('NATACION','fecha_inicio', 'fecha_final', 'DEPORTiIVA', 'ubicacion', 'ciudad')
+            actividad = sportcar.actividad.Actividad('NATACION',datetime.time(1,0,0), datetime.time(2,0,0), 'DEPORTiIVA', 'ubicacion', 'ciudad')
 
+    def test_fechaCorrecta(self):
+        """
+        Test que comprueba que se da el AssertionError cuando la fecha introducida de inicio es posterios a la de final
+        """
+        with self.assertRaises(AssertionError):
+            fecha_inicio = datetime.datetime(2022,1,2,3,4,5,6)
+            fecha_final = datetime.datetime(2021,2,3,4,5,6,7)
+            actividad = sportcar.actividad.Actividad('NATACION',fecha_inicio, fecha_final, 'DEPORTIVA', 'ubicacion', 'ciudad')
+        
 class TestUsuario (unittest.TestCase):
 
     def test_nombreUsuarioLargo(self):
