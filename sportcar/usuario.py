@@ -1,6 +1,5 @@
 from sportcar.errores import TelefonoFormatError, VehiculoFormatError, NombreUsuarioTooLongError, NombreUsuarioTooShortError
 from sportcar.constantes import Contantes
-from assertpy import assert_that
 class Usuario:
 
     def __init__(self, nombre, vehiculo, telefono, ciudad):

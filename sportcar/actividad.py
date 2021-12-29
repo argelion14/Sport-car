@@ -1,5 +1,7 @@
+import datetime
 from sportcar.errores import NombreFormatError , TipoActividadFormatError
 from enum import Enum
+from assertpy import assert_that
 
 class ActividadesDisponibles(Enum):
     ESCALADA = "Escalada en rocodromo"
@@ -14,12 +16,14 @@ class TipoActividad(Enum):
 class Actividad:
 
     def __init__(self, nombre, fecha_inicio, fecha_final, tipo, ubicacion, ciudad):
-        
+
         if (nombre not in ActividadesDisponibles._member_names_):
             raise NombreFormatError()
 
         if (tipo not in TipoActividad._member_names_):
             raise TipoActividadFormatError()
+
+        assert_that(fecha_inicio).is_after(fecha_final) #Nos da un assert en caso de que la fecha
 
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio
