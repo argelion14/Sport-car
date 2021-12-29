@@ -71,11 +71,7 @@ class TestGrupos (unittest.TestCase):
         Test para comprobar que se levanta la excepcion cuando se quiere realizar alguna estadistica y no existe ningun grupo
         """
         with self.assertRaises(sportcar.errores.GruposVacio):
-            usuario = sportcar.usuario.Usuario('Angel',True,'695641699','Granada')
-            actividad = sportcar.actividad.Actividad('NATACION',datetime.datetime(2022,1,2,3,4,5,6), datetime.datetime(2023,1,2,3,4,5,6), 'DEPORTIVA', 'ubicacion', 'ciudad')
-            grupo = sportcar.grupo.Grupo(usuario,actividad)
             grupos = sportcar.grupos.Grupos()
-            #grupos.aniadir_grupo(grupo)
             ciudadFav = grupos.ciudadPreferida()
 
 if __name__ == '__main__':
