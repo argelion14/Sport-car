@@ -23,7 +23,7 @@ class Actividad:
         if (tipo not in TipoActividad._member_names_):
             raise TipoActividadFormatError()
 
-        assert_that(fecha_inicio).is_after(fecha_final) #Nos da un assert en caso de que la fecha
+        assert_that(fecha_inicio).is_after(fecha_final) #Nos da un assert en caso de que la fecha de inicio sea posterior a la de final
 
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio
@@ -49,4 +49,3 @@ class Actividad:
 
     def get_ubicacion(self):
         return self._ubicacion
-
