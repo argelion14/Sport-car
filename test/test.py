@@ -41,28 +41,21 @@ class TestUsuario (unittest.TestCase):
         Test para comprobar que se levanta la excepción cuando se da un nombre de usuario demasiado largo
         """
         with self.assertRaises(sportcar.errores.NombreUsuarioTooLongError):
-            usuario = sportcar.usuario.Usuario('Don idelfonso de la mancha que vive bien lejos el tio macho y encima guapo',True,'695641699','Granada')
+            usuario = sportcar.usuario.Usuario('Don idelfonso de la mancha que vive bien lejos el tio macho y encima guapo',True,'Granada')
 
     def test_nombreUsuarioCorto(self):
         """
         Test para comprobar que se levanta la excepción cuando se da un nombre de usuario demasiado corto
         """
         with self.assertRaises(sportcar.errores.NombreUsuarioTooShortError):
-            usuario = sportcar.usuario.Usuario('J',True,'695641699','Granada')
+            usuario = sportcar.usuario.Usuario('J',True,'Granada')
 
     def test_vehiculo(self):
         """
         Test para comprobar que se da la excepción cuando no se introduce un formato de vehículo correcto
         """
         with self.assertRaises(sportcar.errores.VehiculoFormatError):
-            usuario = sportcar.usuario.Usuario('Angel','NO','695641699','Granada')
-    
-    def test_telefono(self):
-        """
-        Test para comprobar que se da la excepción cuando el formato de telefono que se da no es correcto
-        """
-        with self.assertRaises(sportcar.errores.TelefonoFormatError):
-            usuario = sportcar.usuario.Usuario('Angel',True,695641699,'Granada')
+            usuario = sportcar.usuario.Usuario('Angel','NO','Granada')
 
 class TestGrupos (unittest.TestCase):
 
