@@ -52,7 +52,7 @@ class TestUsuario (unittest.TestCase):
 
     def test_vehiculo(self):
         """
-        Test para comprobar que se da la excepción cuando no se introduce un formato de vehículo correcto
+        Test para comprobar que se da la excepción cuando no se introduce un formato de vehículo admitido
         """
         with self.assertRaises(sportcar.errores.VehiculoFormatError):
             usuario = sportcar.usuario.Usuario('Angel','NO','Granada')
