@@ -11,3 +11,18 @@ La idea de este proyecto viene dada por mi experiecia cuando quise hacer escalad
 
 ## Documentación adicional
 Documentación adicional [aquí](docs/objetivo1.md)
+
+## Gestores
+Documentación [aquí](https://github.com/argelion14/Sport-car/blob/Objetivo4/docs/gestores.md)
+
+## Comprobar que compila
+Con el siguiente comando comprobamos la compilación de los ficheros
+~~~
+invoke check
+~~~
+
+## Test
+Para realizar los [test](https://github.com/argelion14/Sport-car/blob/Objetivo4/docs/test.md) sobre nuestros archivos y comprobar su funcionalidad realizaremos el siguiente comando con nuestra herramienta de construcción invoke
+~~~
+invoke test
+~~~

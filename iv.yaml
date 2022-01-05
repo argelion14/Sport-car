@@ -1,2 +1,7 @@
 lenguaje: python
 entidad: sportcar/actividad.py
+automatizar:
+  fichero: tasks.py
+  orden: invoke
+test: test/test.py
+

@@ -1,7 +1,30 @@
+import datetime
+from sportcar.errores import NombreFormatError , TipoActividadFormatError
+from enum import Enum
+from assertpy import assert_that
+
+class ActividadesDisponibles(Enum):
+    ESCALADA = "Escalada en rocodromo"
+    NATACION = "Natación en pabellón"
+    PADEL = "Padel en pista"
+
+class TipoActividad(Enum):
+    DEPORTIVA = "Actividad deportiva"
+    CULTURA = "Actividad cultural"
+    APRENDIZAJE = "Actividad en la que se prioriza el querer aprender"
 
 class Actividad:
 
     def __init__(self, nombre, fecha_inicio, fecha_final, tipo, ubicacion, ciudad):
+
+        if (nombre not in ActividadesDisponibles._member_names_):
+            raise NombreFormatError()
+
+        if (tipo not in TipoActividad._member_names_):
+            raise TipoActividadFormatError()
+
+        assert_that(fecha_inicio).is_before(fecha_final) #Nos da un AssertionError en caso de que la fecha de inicio sea posterior a la de final
+
         self._nombre = nombre
         self._fecha_inicio = fecha_inicio
         self._fecha_final = fecha_final
@@ -26,4 +49,3 @@ class Actividad:
 
     def get_ubicacion(self):
         return self._ubicacion
-
