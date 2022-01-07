@@ -2,7 +2,7 @@ FROM python:3.10.1-slim
 
 LABEL maintainer="argelion14"
 
-RUN apt-get update; pip install poetry ;groupadd -r tester && useradd -m -g tester tester
+RUN pip install poetry ;groupadd -r tester && useradd -m -g tester tester
 
 USER tester
 WORKDIR /app/test
