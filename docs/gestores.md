@@ -10,7 +10,7 @@ Para comprobar la compilación del código simplemente correremos el comando pyt
 
 Para realizar los test con invoke, correremos el comando python3 -m unittest -v test/test.py dentro del fichero tasks.py en el apartado test.
 
-## Gestor de dependencias
+## Gestor de dependencias: poetry
 Se ha decidido emplear un gestor de dependecias mejor que pip combinado con requirements debido a una mejor práctica y estandar de projecto.
 
 Para ello se ha buscado entre varios gestores de dependencias como son Flit, Setuptools y poetry,([+info](https://packaging.python.org/en/latest/key_projects/)) decantandonos por este último por la facilidad de generar el archivo pyproject.toml, también porque hoy día está siendo el estandar en control de dependencias, poetry esta destinado a [respaladar el desarrollo de aplicaciones](https://news.ycombinator.com/item?id=26735227), lo cual es lo que nosotros estamos buscando.
@@ -19,4 +19,4 @@ A nivel subjetivo, también se ha elegido Poetry pues ya se había trabajado con
 
 Realizaremos la instalación desde la [documentación oficial](https://python-poetry.org/docs/#installation)
 
-Tras esto se realizará el poetry init y se pondrá en marcha el archivo pyproject.toml, se instalaran las dependencias con poetry install y se chequeará todo con poetry check.
+Tras esto se realizará el poetry init y se pondrá en marcha el archivo pyproject.toml, se instalaran las dependencias con poetry install o con nuestro gestor de tareas, con la orden invoke installdeps y se chequeará todo con poetry check.
