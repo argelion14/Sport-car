@@ -6,7 +6,7 @@ def installdeps(c):
     Instala todas las dependencias
     """
     print("Instalar las dependencias")
-    run ("pip3 install -r requirements.txt")
+    run ("poetry install")
     print("Se han instalado correctamente las dependencias")
 
 @task
