@@ -20,3 +20,8 @@ def test(c):
     print("Lanzamos los test de unittest")
     run("python3 -m unittest -v test/test.py")
     print("Todo correcto")
+
+@task 
+def docker(c):
+    print("Contruimos y ejecutamos los test en el contenedor docker")
+    run("docker build . --file Dockerfile --tag argelio14/sport-car && docker run -t -v `pwd`:/app/test argelion14/sport-car")
