@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    paths:
+      - 'Dockerfile'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check del repositorio
+      uses: actions/checkout@v2
+    - name: Build the Docker image
+      
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      
+    - name: Build
+      run: docker build . --file Dockerfile
+    - name: Push
+      run: docker push ${{secrets.DOCKER_USER}}/sport-car
