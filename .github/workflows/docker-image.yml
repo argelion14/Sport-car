@@ -4,8 +4,9 @@ on:
   push:
     paths:
       - 'Dockerfile'
-    branches:
-      - '*'
+      - 'pyproject.toml'
+      - 'poetry.lock'
+    
 
 jobs:
 
