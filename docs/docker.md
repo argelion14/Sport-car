@@ -1,9 +1,9 @@
 # Docker
 
-## Elección de un contenedor base: slim
+## Elección de un contenedor base: slim-bulleye
 ### Criterios de búsqueda
 Como criterio de búsqueda de nuestro contenedor destacamos los siguientes:
-* Que sea oficial para evitar posibles problemas.
+* Que sea oficial para evitar posibles problemas, estas tienen preinstaladas múltiples versiones de python, además de varias variantes que elegir
 * Versión más estable.
 * Contendor base lo más simple posible en que no haya cosas de más necesarias para nuestro proyecto.
 * Lo más rápido posible.
@@ -11,7 +11,7 @@ Como criterio de búsqueda de nuestro contenedor destacamos los siguientes:
 
 Por ello se consultaron las posibles variantes del contenedor **oficial** de Dockerhub [aquí](https://hub.docker.com/_/python).
 
-No se consideró alpine como primera opción debido a [información](https://pythonspeed.com/articles/alpine-docker-python/) que aportaba que era más lento usar este en un docker de python, por ello se probó con slim (por ser la oficial de python que se centra es ser la más 'delgada') y dentro de esta con slim a secas, con slim bulleye y con slim buster.
+No se consideró alpine como primera opción debido a [información](https://pythonspeed.com/articles/alpine-docker-python/) que aportaba que era más lento usar este en un docker de python, por ello se probó con slim (variante de Debian 11)(por ser la oficial de python que se centra es ser la más 'delgada') y dentro de esta con slim a secas, con slim bulleye y con slim buster.
 
 Las pruebas realizadas a continuación reflejan las imagenes que se probarón. Se realizarón tres veces las pruebas y se hizo una media de ellas
 
