@@ -2,7 +2,7 @@
 name = "assertpy"
 version = "1.1"
 description = "Simple assertion library for unit testing in python with a fluent API"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -17,7 +17,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6e3a21466414f7c24fff050d91855806a0963e289f18161944ea105bcd1f0115"
+content-hash = "4632b7b3ed5d8f8db76f7e0488708eb5b4d0747c8457432d1694c980e74cb6e5"
 
 [metadata.files]
 assertpy = [

@@ -21,7 +21,7 @@ time docker build . --file Dockerfile --tag argelion14/sport-car
 ```
 Para sacar el tamaño se uso docker desktop.
 
-| Imagen | Tiempo | Tamaño | Ejecución de test |
+| Imagen | Tiempo de construcción de la imagen | Tamaño | Ejecución de test |
 | ------ | ------ | ------ | ----------------- |
 | python:3.10.1-slim | 6.313s | 186.25MB | 0.002s |
 | python:3.10.1-slim-bulleye | 6.415s | 179.35MB | 0.002s |
