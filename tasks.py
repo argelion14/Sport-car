@@ -6,7 +6,7 @@ def installdeps(c):
     Instala todas las dependencias
     """
     print("Instalar las dependencias")
-    run ("poetry install")
+    run ("poetry update && poetry install")
     print("Se han instalado correctamente las dependencias")
 
 @task
@@ -24,4 +24,4 @@ def test(c):
 @task 
 def docker(c):
     print("Contruimos y ejecutamos los test en el contenedor docker")
-    run("docker build . --file Dockerfile --tag argelio14/sport-car && docker run -t -v `pwd`:/app/test argelion14/sport-car")
+    run("docker build . --file Dockerfile --tag argelion14/sport-car && docker run -t -v `pwd`:/app/test argelion14/sport-car")
