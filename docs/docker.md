@@ -2,9 +2,9 @@
 
 ## Elección de un contenedor base: slim-bulleye
 ### Criterios de búsqueda
-Como criterio de búsqueda de nuestro contenedor destacamos los siguientes:
-* Que sea oficial para evitar posibles problemas, estas tienen preinstaladas múltiples versiones de python, además de varias variantes que elegir.
-* Contendor base lo más simple posible en que no haya cosas de más necesarias para nuestro proyecto.
+Como criterios de búsqueda de nuestro contenedor destacamos los siguientes:
+* Que sea oficial para evitar posibles problemas, pues aquellos que son oficiales tienen preistaladas múltiples versiones de python, además de varias variantesa para elegir.
+* Contendor base lo más simple posible, evitando todo aquello que sea innesario para nuestro proyecto.
 * Lo más rápido posible, tanto en tiempo de contrucción de la imagen como en ejecución de test.
 * Versión ^3.8.10 que es con la que se ha trabajado a lo largo del proyecto y a ser posible la última versión a modo de optimización y mejora respecto a una versión anterior siguiente así buenas [prácticas](https://blog.sqreen.com/top-10-python-security-best-practices/).
 
