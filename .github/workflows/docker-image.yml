@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'Dockerfile'
+      - 'pyproject.toml'
+      - 'poetry.lock'
+      - '.github/workflows/docker-image.yml'
 
 jobs:
 
@@ -14,16 +17,14 @@ jobs:
     steps:
     - name: Check del repositorio
       uses: actions/checkout@v2
-    - name: Build the Docker image
-      #uses: docker/login-action@v1
-      env:
-        DOCKER_USER: $
-        DOCKER_PASSWORD: $
-        
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-
+    - name: Login en dockerhub
+      uses: docker/login-action@v1
+      with:
+        username: ${{secrets.DOCKER_USER}}
+        password: ${{secrets.DOCKER_PASSWORD}}
+      
     - name: Build
-      run: docker build . --file Dockerfile
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/sport-car
       
     - name: Push
-      run: docker push $
+      run: docker push ${{secrets.DOCKER_USER}}/sport-car
