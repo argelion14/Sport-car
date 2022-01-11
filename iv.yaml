@@ -4,7 +4,3 @@ automatizar:
   fichero: tasks.py
   orden: invoke
 test: test/test.py
-CI:
-  - .github/workflows/testear.yml
-  - .circleci/config.yml
-  
