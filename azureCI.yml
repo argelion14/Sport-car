@@ -6,6 +6,7 @@ trigger:
     include:
     - sportcar
     - test
+    - azureCI.yml
 
 pr:
   branches:

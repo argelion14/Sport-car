@@ -26,7 +26,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Dependencias
+    - name: Instalar Poetry y dependencias
       run: |
         pip install poetry
         poetry config virtualenvs.create false
