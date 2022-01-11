@@ -8,7 +8,8 @@ Se establecen así una serie de requisitos mínimos que tienen que tener estos s
 * Que el sistema se integre con nuestro repositorio de github.
 * Que sea un sistema actualizado y que se use en la actualidad para proyectos similares.
 * Que sea gratuito, pues es un proyecto educativo que pretende enseñar y que se aprendan conceptos de desarrollo ágil.
-* Fácil de implementar, sin necesidad de realizar una instalación en un servidor.
+* Fácil de implementar, sin necesidad de realizar una instalación en un servidor, todo desde la nube.
+* Soporte para docker.
 
 Nos centraremos en la versión 3.8 de python pues es esta la que se ha usado para desarrollar el proyecto de manera local.
 ![Version de python local](/docs/imagenes/version_python_local.png "Version de python local")
@@ -37,3 +38,17 @@ Para configurar la herramienta de integración continua, lo primero y como hicim
 Configuraremos el job para que ejecute los test en diferentes versiones de Python
  
 ![CI Github action](/docs/imagenes/CI_Github-action.png "CI Github action")
+
+Ha resultado ser fácil de implementar, trabaja con diferentes versiones de python para ver como se comporta nuestro proyecto en diferentes ambientes, se integra completamente con github y es gratuito, una buena herramienta para realizar CI en nuestro proyecto.
+
+### Circle CI
+
+Para la configuración de Circle CI, nos registramos y desde el primer momento nos damos cuenta que esta muy relacionada con github, nos permite elegir nuestro proyecto desde la propia web y realizar un documento de configuración en nuestra rama dandonos una base, en este caso se elige nuestro lenguaje python.
+
+![CI CircleCI python](/docs/imagenes/CI_circleCI_python.png "CI CircleCI python")
+
+A continuación se edita la configuración y ponemos nuestros parametros, pondremos nuestra imagen docker, como máquina donde se ejecutaran los test siendo esta, que testea la version *3.10-slim-bulleye* de python, que era la que provaba nuestra contenedor.
+
+A continuación se muestra el correcto funcionamiento de los test con nuestra herramienta de integración continua:
+
+![CI CircleCI Test](imagenes/CI_circleCI_test.png "CI CircleCI Test")
