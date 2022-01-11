@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Test en python
+          name: Test
           command: invoke test
 
 workflows:
