@@ -41,6 +41,8 @@ Configuraremos el job para que ejecute los test en diferentes versiones de Pytho
 
 Ha resultado ser fácil de implementar, trabaja con diferentes versiones de python para ver como se comporta nuestro proyecto en diferentes ambientes, se integra completamente con github y es gratuito, una buena herramienta para realizar CI en nuestro proyecto.
 
+La documentación seguida puede consultarse [aquí](https://github.com/actions/starter-workflows/blob/main/ci/python-package.yml)
+
 ### Circle CI
 
 Para la configuración de Circle CI, nos registramos y desde el primer momento nos damos cuenta que esta muy relacionada con github, nos permite elegir nuestro proyecto desde la propia web y realizar un documento de configuración en nuestra rama dandonos una base, en este caso se elige nuestro lenguaje python.
@@ -53,7 +55,7 @@ A continuación se muestra el correcto funcionamiento de los test con nuestra he
 
 ![CI CircleCI Test](imagenes/CI_circleCI_test.png "CI CircleCI Test")
 
-Pese a toda la facilidad de uso que implicaba, no se consideró pues me daba error en diferentes pruebas y tarde mucho en conseguir subsanar el error lo que implica posibles problemas a la larga.
+Pese a toda la facilidad de uso que implicaba, no se consideró pues me daba error en diferentes pruebas y tarde mucho en conseguir subsanar el error(solo se encontró lo que suponía el error) lo que implica posibles problemas a la larga.
 
 Este error se debe a que ya no se da [soporte](https://github.blog/2021-09-01-improving-git-protocol-security-github/#libgit2-and-other-git-clients) a partir del dia 11 es decir llego justo, por lo que ya no me funciona. No es compatible con SHA-2.
 
@@ -67,9 +69,17 @@ Seleccionaremos nuestro repositorio sport-car, y luego seleccionaremos nosotros 
 
 Siguiendo la [documentación oficial](https://docs.microsoft.com/es-es/azure/devops/pipelines/ecosystems/python?view=azure-devops) desarrollamos el yml.
 
-Este nos da fallo debido a que necesitamos una licencia para lanzar pruebas en paralelo. No se ha conseguido obtener la licencia deseada, se dejará y se buscará otra herramienta.
+Este nos da fallo debido a que necesitamos una licencia para lanzar pruebas en paralelo.
 
 ![CI Azure fallo](/docs/imagenes/CI_AzureCI_Fallo.png "CI Azure fallo")
+
+Tras un tiempo ya si tenemos permisos y conseguimos ejecutar los jobs y comprobar como se ejecutaban los test, todo ello en sincronización con github.
+
+![CI Azure Acierto](/docs/imagenes/CI_AzureCI_Acierto.png "CI Azure Acierto")
+
+Azure ha sido una herramienta que pese, tener que enviar un formulario para empezar a trabajar ha sido sencilla de usar desde un principio y perfectamente integrada con github, por la que no se descarta como posible herrmienta de CI del proyecto, también destacar todo el proceso ha sido gratuito.
+
+La documentación seguida [aquí](https://docs.microsoft.com/es-es/azure/devops/pipelines/?view=azure-devops).
 
 ### Semaphore CI
 
@@ -77,10 +87,20 @@ Se ha prescindido de esta debido a la pequeña prueba de 14 dias que ofrece.
 
 ### Travis
 
-Vamos a utilizar el mes gratuito que ofrece, suficiente para testear nuestra aplicación. Realizaremos un Trigger build y conseguiremos realizar los test como se muestra con una configuración sencilla.
+Vamos a utilizar el mes gratuito que ofrece, que aunque insuficiente para testear nuestra aplicación veremos como funciona. Realizaremos un Trigger build y conseguiremos realizar los test como se muestra con una configuración sencilla.
 
 ![CI Travis test](/docs/imagenes/CI_Travis_Test.png "CI Travis test")
 
 Configuración:
 
 ![CI Travis configuracion](/docs/imagenes/CI_Travis_Configuracion.png "CI Travis configuración")
+
+Una herramienta sencilla de usar, pues aporta mucho con su Trigger build.
+
+#### Elección final
+
+Se ha decidido descartar Semaphore CI y Travis por su condición de ser herramientas de CI de pago que ofrecen un servicio gratuito, en especial Travis se trabajó, y aunque resulte ser fácil de usar se termino por dejar de usar por ser un pruba de un mes.
+
+También se ha descartado Circle CI debido a problemas al clonar el repositorio de github a partir del 11 de Enero de 2022. [(+info)](https://github.blog/2021-09-01-improving-git-protocol-security-github/#libgit2-and-other-git-clients)
+
+Por ello las elecciones han sido **Github Action**, una herramienta que sirve para CI en nuestro proyecto, muy simple y la mejor integrada con github, y **Azure pipelines** otra herramienta que, nos permite probar python en diferentes ambientes, de una manera sencilla con un archivo de configuración azureCI.yml.
