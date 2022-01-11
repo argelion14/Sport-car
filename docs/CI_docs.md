@@ -23,7 +23,7 @@ Se han tenido en cuenta así:
 [Circle ci](https://circleci.com/), 
 [Github Actions](https://github.com/argelion14/Sport-car/blob/Objetivo6/.github/workflows/testear.yml)
 
-* [X] Especificar porque se testea cada versión
+* [X] Especificar por que se testea cada versión
 * [X] En un CI usar varios ambientes/versiones del lenguaje utilizado
 * [X] En cada una, aplicar los test
 
@@ -49,7 +49,7 @@ Para la configuración de Circle CI, nos registramos y desde el primer momento n
 
 ![CI CircleCI python](/docs/imagenes/CI_circleCI_python.png "CI CircleCI python")
 
-A continuación se edita la configuración y ponemos nuestros parametros, pondremos nuestra imagen docker, como máquina donde se ejecutaran los test siendo esta, que testea la version *3.10-slim-bulleye* de python, que era la que provaba nuestra contenedor.
+A continuación se edita la configuración y ponemos nuestros parametros, pondremos nuestra imagen docker, como máquina donde se ejecutaran los test siendo esta, que testea la version *3.10-slim-bulleye* de python, que era la que probaba nuestra contenedor.
 
 A continuación se muestra el correcto funcionamiento de los test con nuestra herramienta de integración continua:
 
@@ -65,15 +65,13 @@ Una vez nos registramos en el sitio oficial con nuestra cuenta de github, despu�
 
 Seleccionaremos nuestro repositorio sport-car, y luego seleccionaremos nosotros el YAML file pues queremos trabajar desde nuestra rama.
 
-![CI Azure Elección](/docs/imagenes/CI_AzureCI_Eleccion.png "CI Azure Elección")
-
 Siguiendo la [documentación oficial](https://docs.microsoft.com/es-es/azure/devops/pipelines/ecosystems/python?view=azure-devops) desarrollamos el yml.
 
 Este nos da fallo debido a que necesitamos una licencia para lanzar pruebas en paralelo.
 
 ![CI Azure fallo](/docs/imagenes/CI_AzureCI_Fallo.png "CI Azure fallo")
 
-Tras un tiempo ya si tenemos permisos y conseguimos ejecutar los jobs y comprobar como se ejecutaban los test, todo ello en sincronización con github.
+Tras un tiempo ya si tenemos permisos al realizar un cuestionario que no sale en la web, conseguimos ejecutar los jobs y comprobar como se ejecutaban los test, todo ello en sincronización con github.
 
 ![CI Azure Acierto](/docs/imagenes/CI_AzureCI_Acierto.png "CI Azure Acierto")
 
@@ -99,7 +97,7 @@ Una herramienta sencilla de usar, pues aporta mucho con su Trigger build.
 
 #### Elección final
 
-Se ha decidido descartar Semaphore CI y Travis por su condición de ser herramientas de CI de pago que ofrecen un servicio gratuito, en especial Travis se trabajó, y aunque resulte ser fácil de usar se termino por dejar de usar por ser un pruba de un mes.
+Se ha decidido descartar Semaphore CI y Travis por su condición de ser herramientas de CI de pago que ofrecen un servicio gratuito, en especial Travis se trabajó, y aunque resulte ser fácil de usar se terminó por dejar de usar por ser un pruba de un mes.
 
 También se ha descartado Circle CI debido a problemas al clonar el repositorio de github a partir del 11 de Enero de 2022. [(+info)](https://github.blog/2021-09-01-improving-git-protocol-security-github/#libgit2-and-other-git-clients)
 
