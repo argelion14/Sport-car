@@ -52,3 +52,22 @@ A continuación se edita la configuración y ponemos nuestros parametros, pondre
 A continuación se muestra el correcto funcionamiento de los test con nuestra herramienta de integración continua:
 
 ![CI CircleCI Test](imagenes/CI_circleCI_test.png "CI CircleCI Test")
+
+Pese a toda la facilidad de uso que implicaba, no se consideró pues me daba error en diferentes pruebas y tarde mucho en conseguir subsanar el error lo que implica posibles problemas a la larga.
+
+### Azure pipelines
+
+Una vez nos registramos en el sitio oficial con nuestra cuenta de github, después de darle permisos, empezaremos a trabajar con Azure DevOps.
+
+Seleccionaremos nuestro repositorio sport-car, y luego seleccionaremos nosotros el YAML file pues queremos trabajar desde nuestra rama.
+
+![CI Azure Elección](/docs/imagenes/CI_AzureCI_Eleccion.png "CI Azure Elección")
+
+Siguiendo la [documentación oficial](https://docs.microsoft.com/es-es/azure/devops/pipelines/ecosystems/python?view=azure-devops) desarrollamos el yml.
+
+Este nos da fallo debido a que necesitamos una licencia para lanzar pruebas en paralelo. No se ha conseguido obtener la licencia deseada, se dejará y se buscará otra herramienta.
+
+![CI Azure fallo](/docs/imagenes/CI_AzureCI_Fallo.png "CI Azure fallo")
+
+
+
