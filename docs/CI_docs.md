@@ -55,6 +55,8 @@ A continuación se muestra el correcto funcionamiento de los test con nuestra he
 
 Pese a toda la facilidad de uso que implicaba, no se consideró pues me daba error en diferentes pruebas y tarde mucho en conseguir subsanar el error lo que implica posibles problemas a la larga.
 
+Este error se debe a que ya no se da [soporte](https://github.blog/2021-09-01-improving-git-protocol-security-github/#libgit2-and-other-git-clients) a partir del dia 11 es decir llego justo, por lo que ya no me funciona. No es compatible con SHA-2.
+
 ### Azure pipelines
 
 Una vez nos registramos en el sitio oficial con nuestra cuenta de github, después de darle permisos, empezaremos a trabajar con Azure DevOps.
@@ -69,5 +71,16 @@ Este nos da fallo debido a que necesitamos una licencia para lanzar pruebas en p
 
 ![CI Azure fallo](/docs/imagenes/CI_AzureCI_Fallo.png "CI Azure fallo")
 
+### Semaphore CI
 
+Se ha prescindido de esta debido a la pequeña prueba de 14 dias que ofrece.
 
+### Travis
+
+Vamos a utilizar el mes gratuito que ofrece, suficiente para testear nuestra aplicación. Realizaremos un Trigger build y conseguiremos realizar los test como se muestra con una configuración sencilla.
+
+![CI Travis test](/docs/imagenes/CI_Travis_Test.png "CI Travis test")
+
+Configuración:
+
+![CI Travis configuracion](/docs/imagenes/CI_Travis_Configuracion.png "CI Travis configuración")
