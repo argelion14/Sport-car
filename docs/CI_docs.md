@@ -11,8 +11,7 @@ Se establecen así una serie de requisitos mínimos que tienen que tener estos s
 * Fácil de implementar, sin necesidad de realizar una instalación en un servidor, todo desde la nube.
 * Soporte para docker.
 
-Nos centraremos en la versión 3.8 de python pues es esta la que se ha usado para desarrollar el proyecto de manera local.
-![Version de python local](/docs/imagenes/version_python_local.png "Version de python local")
+Nos centraremos en la versión 3.8 de python pues es de las versiones más utilizadas hoy día.
 
 Se quiere también testear en la última versión, la 3.10, como es lógico y siguiendo [buenas prácticas](https://blog.sqreen.com/top-10-python-security-best-practices/), y siguiendo la lógica testearemos en las versiones intermedias, la 3.9.
 
