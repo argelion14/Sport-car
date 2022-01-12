@@ -1,0 +1,35 @@
+name: Testing Python diferentes ambientes
+
+on:
+  push:
+    paths:
+      - 'sportcar/**'
+      - 'test/**'
+      - '.github/workflows/testear.yml'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version: ['3.8','3.9','3.10']
+    
+      fail-fast: false
+    
+    steps:
+    - name: Check del repositorio
+      uses: actions/checkout@v2
+    - name: Activamos python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Instalar Poetry y dependencias
+      run: |
+        pip install poetry
+        poetry config virtualenvs.create false
+        poetry update && poetry install
+    - name: Test
+      run: invoke test
