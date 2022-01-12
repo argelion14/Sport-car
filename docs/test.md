@@ -1,7 +1,15 @@
 # Biblioteca de aserciones y de framework de test
 
 ## Biblioteca de aserciones
-Para las assert se ha decidido usar la bilioteca que viene por defecto con python además de assertpy la cual me permite unas opciones más que necesito para validar mi código, con afirmaciones simples para pruebas unitarias en python y también con la que puedo escalar a futuro los assert del mismo, esta elección se ha realizado en base a búsquedas en diferentes web, la popularidad y uso de la comunidad de esta, su populariad radica en que se descangan una media de 35.340 descargas a la semana, la comunidad se puede observar en esta [web](https://snyk.io/advisor/python/assertpy) y fijandonos en su [repositorio de github](https://github.com/assertpy/assertpy) la cual se observa una comunidad activa, cuenta con numerosas estrellas en github (329) y númerosos contribuidores, en base a esto se decidió ver esta biblioteca de aserciones en primera instancia, luego leyendo la extensa [documentación](https://assertpy.github.io/docs.html) se pudo comprobar que se ajustaba a las necesidades básicas primarias que necesitaba mi código.
+
+Para ello se proponen una serie de criterios que ha de cumplir, nuestra biblioteca:
+
+* Una alta media de descargas semanales, que en este caso es de 35.340.
+* Una comunidad activa que que me proporcione respuesta rápida y ágil antes posibles issues en la realización del proyecto.
+* Una valoración positiva en github (329 estrellas)
+* Una serie de assert que me ayuden a la hora de desarrollar el código (en este caso se encontró uno que beneficiaba particularmente para las afirmaciones de fecha).
+
+Para las assert se usa la bilioteca que viene por defecto con python además de assertpy la cual me permite unas opciones más que necesito para validar mi código y cumple con los criterios que buscamos como biblioteca de aserciones, con afirmaciones simples para pruebas unitarias en python y también con la que puedo escalar a futuro los assert del mismo, esta elección se ha realizado en base a búsquedas en diferentes web, la popularidad y uso de la comunidad de esta, su populariad radica en que se descangan una media de 35.340 descargas a la semana, la comunidad se puede observar en esta [web](https://snyk.io/advisor/python/assertpy) y fijandonos en su [repositorio de github](https://github.com/assertpy/assertpy) la cual se observa una comunidad activa, cuenta con numerosas estrellas en github (329) y númerosos contribuidores, en base a esto se decidió ver esta biblioteca de aserciones en primera instancia, luego leyendo la extensa [documentación](https://assertpy.github.io/docs.html) se pudo comprobar que se ajustaba a las necesidades básicas primarias que necesitaba mi código.
 
 ## Framework de test
 Para resolver el issue #11 donde se comprueba que funcionan las clases de usuario así como de actividad en el PMV.
