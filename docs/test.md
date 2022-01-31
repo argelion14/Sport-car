@@ -1,7 +1,17 @@
 # Biblioteca de aserciones y de framework de test
 
 ## Biblioteca de aserciones
-Para las assert se ha decidido usar la bilioteca que viene por defecto con python además de assertpy la cual me permite unas opciones más que necesito para validar mi código, con afirmaciones simples para pruebas unitarias en python y también con la que puedo escalar a futuro los assert del mismo, esta elección se ha realizado en base a búsquedas en diferentes web, la popularidad y uso de la comunidad de esta, su populariad radica en que se descangan una media de 35.340 descargas a la semana, la comunidad se puede observar en esta [web](https://snyk.io/advisor/python/assertpy) y fijandonos en su [repositorio de github](https://github.com/assertpy/assertpy) la cual se observa una comunidad activa, cuenta con numerosas estrellas en github (329) y númerosos contribuidores, en base a esto se decidió ver esta biblioteca de aserciones en primera instancia, luego leyendo la extensa [documentación](https://assertpy.github.io/docs.html) se pudo comprobar que se ajustaba a las necesidades básicas primarias que necesitaba mi código.
+
+Para ello se proponen una serie de criterios que ha de cumplir nuestra biblioteca para nuestro proyecto:
+
+* Un buen soporte, ya que queremos, poder resolver cualquier duda de manera rápida, es decir que tenga una comunidad activa, debido a la caracteristica de nuestro proyecto de c caracter docente, en el que se aprende, en un tiempo determinado, un cuatrimestre.
+* Una serie de assert que me ayuden a la hora de desarrollar el código (en este caso se encontró uno que beneficiaba particularmente para las afirmaciones de fecha).
+* Una correcta documentación.
+* Sencillez de uso y de implementación en código.
+
+A partir de aquí se divisarón varias opciones como es el caso de la biblioteca por defecto, Asserpy, Grappa o Verify que cumplen, con la mayoria de requisitos pero se ha de mencionar que estas dos últimas se descartarón debido a su débil comunidad, y verify además por sus numerosas vulnerabilidades [(+info)](https://snyk.io/advisor/npm-package/verify), también se eliminó la idea de usar Grappa[(+info)](https://snyk.io/advisor/python/grappa) frente a Asserpy, debido a la gran comunidad con la que cuenta Assertpy, en su repositorio cuenta con mantenimiento continiuo.
+
+Así pues para las assert se usa la bilioteca que viene por defecto con python además de assertpy la cual me permite unas opciones más que necesito para validar mi código y cumple con los criterios que buscamos como biblioteca de aserciones, con afirmaciones simples para pruebas unitarias en python y también con la que puedo escalar a futuro los assert del mismo, esta elección se ha realizado en base a búsquedas en diferentes web, la popularidad y uso de la comunidad de esta, su populariad radica en que se descangan una media de 35.340 descargas a la semana, la comunidad se puede observar en esta [web](https://snyk.io/advisor/python/assertpy) y fijandonos en su [repositorio de github](https://github.com/assertpy/assertpy) la cual se observa una comunidad activa, cuenta con numerosas estrellas en github (329) y númerosos contribuidores, en base a esto se decidió ver esta biblioteca de aserciones en primera instancia, luego leyendo la extensa [documentación](https://assertpy.github.io/docs.html) se pudo comprobar que se ajustaba a las necesidades básicas primarias que necesitaba mi código.
 
 ## Framework de test
 Para resolver el issue #11 donde se comprueba que funcionan las clases de usuario así como de actividad en el PMV.
