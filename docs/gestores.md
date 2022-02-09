@@ -1,6 +1,6 @@
 # Gestores
 
-## Gestor de tareas: Invoke
+## Gestor de tareas:
 
 A continuación se destacan una serie de factores que tiene que cumplir nuestro gestor de tareas.
 
@@ -17,7 +17,7 @@ El primero, [Poethepoet](https://github.com/nat-n/poethepoet), se combina bien c
 
 [Make](https://www.gnu.org/software/make/manual/make.html) es una herramienta muy versatíl, con una sintaxis no muy complicada y que se lleva trabajando desde hace tiempo para funciones como compilación de programas en linux, esta actualmente se encuentra respaldada por desarrolladores. No se ha considerado debido a que pese a ser muy sencilla y operativa para lo que se necesita, un uso básico, no se usa de una manera pythinica, ni se recomienda por la comunidad para python.
 
-Tras haber analizado las diferentes herramientas de Poethepoet y Make pasamos a analizar Invoke herramienta que se ha decidido usar como gestor de tareas de python en mi proyecto, en un primer paso y a nivel objetivo por lo que ofrece, una API de alto nivel y clara que permite ejecutar comandos y definir/organizar las funciones de las tareas con un *único* archivo tasks.py, asi es, un fichero python lo cual ayuda, todo esto esta soporteado y actualizado en github con una ultima actualización hace menos de 3 meses, como criterios subjetivos he decidido usar invoke frente a otros como poetry, por la sencillez del uso de este, ya que para un uso de entender lo que se busca y para mi aplicación de ejemplo viene bien, así como la fácil comprensión de la [documentación](https://docs.pyinvoke.org/en/stable/) para poder realizar las tareas que se tienen que llevar a cabo con una aplicación por medio de la herramienta de construcción.
+Tras haber analizado las diferentes herramientas de Poethepoet y Make pasamos a analizar **Invoke** herramienta que se ha decidido usar como gestor de tareas de python en mi proyecto, en un primer paso y a nivel objetivo por lo que ofrece, una API de alto nivel y clara que permite ejecutar comandos y definir/organizar las funciones de las tareas con un *único* archivo tasks.py, asi es, un fichero python lo cual ayuda, todo esto esta soporteado y actualizado en github con una ultima actualización hace menos de 3 meses, como criterios subjetivos he decidido usar invoke frente a otros como poetry, por la sencillez del uso de este, ya que para un uso de entender lo que se busca y para mi aplicación de ejemplo viene bien, así como la fácil comprensión de la [documentación](https://docs.pyinvoke.org/en/stable/) para poder realizar las tareas que se tienen que llevar a cabo con una aplicación por medio de la herramienta de construcción.
 
 Se seguirá la [documentación](https://docs.pyinvoke.org/en/stable/) oficial para instalar invoke por lo que se usará el gestor de dependencias **poetry**.
 
