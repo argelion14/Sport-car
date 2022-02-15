@@ -50,7 +50,7 @@ class TestUsuario (unittest.TestCase):
         with self.assertRaises(sportcar.errores.NombreUsuarioTooShortError):
             usuario = sportcar.usuario.Usuario('J',True,'Granada')
 
-    def test_vehiculo(self):
+    def test_nombreVehiculo(self):
         """
         Test para comprobar que se da la excepción cuando no se introduce un formato de vehículo admitido
         """
